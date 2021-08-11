@@ -18,13 +18,29 @@
 
   <div class="cards">
     <% @garden.plants.each do |plant| %>
+
       <div class="card-category position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image_url %>)">
         <%= plant.name %>
 
         <%= link_to plant_path(plant), method: :delete, class: 'btn btn-danger position-absolute' do %>
           <i class="fas fa-minus-square"></i>
         <% end %>
+
+
+        <!-- tags -->
+        <div class="card-tags">
+          <% plant.tags.each do |tag| %>
+
+            <span><%= tag.name %></span>
+
+          <% end %>
+
+          <%= link_to '+', new_plant_plant_tag_path(plant) %>
+        </div>
+
+
       </div>
+
     <% end %>
   </div>
 </div>

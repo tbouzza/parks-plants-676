@@ -4,4 +4,6 @@ LIVECODE Batch 676 - Dubaï
 
 V As a user I can see one garden's plants
 V As a user I can add a plant in a garden
-# As a user I can delete a plant
+V As a user I can delete a plant
+
+# As a user I can add a tag to a plant
